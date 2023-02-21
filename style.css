@@ -1,0 +1,74 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+/* TYPOGRAPHIE */
+
+.modes,
+.submit-btn {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+}
+
+.modes {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    text-transform: capitalize;
+    padding-left: 0.5em;
+}
+
+.submit-btn {
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: #FFFFFF;
+}
+
+/* MAIN */
+
+body {
+    background-color: #1F2937;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 2.4em 0;
+}
+
+.get-color {
+    height: 43px;
+    width: 61px;
+    border: 0.5px solid #313131;
+}
+
+.modes {
+    background: #1F293A;
+    border: 1px solid #D1D5DB;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    color: white;
+    width: 312px;
+    height: 42px;
+}
+
+.submit-btn {
+    width: 123px;
+    height: 42px;
+    background: #3D4B60;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    border: none;
+}
