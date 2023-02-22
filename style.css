@@ -12,14 +12,20 @@ html {
 /* TYPOGRAPHIE */
 
 .modes,
-.submit-btn {
+.submit-btn,
+.hex-code {
     font-family: 'Inter', sans-serif;
     font-style: normal;
+    color: white;
+}
+
+.modes,
+.submit-btn {
+    font-size: 1.6rem;
 }
 
 .modes {
     font-weight: 400;
-    font-size: 1.6rem;
     line-height: 2.4rem;
     text-transform: capitalize;
     padding-left: 0.5em;
@@ -27,58 +33,110 @@ html {
 
 .submit-btn {
     font-weight: 500;
-    font-size: 1.6rem;
     line-height: 1.6rem;
+}
+
+.hex-code {
     color: #FFFFFF;
+    font-size: 1.2rem;
 }
 
 /* FORM */
 
 body {
     background-color: #1F2937;
+    min-width: 300px;
+    max-width: 550px;
 }
 
 form {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 50px 50px;
+    grid-template-rows: 1fr 1fr;
     align-items: center;
     justify-items: center;
     grid-gap: 10px;
-    margin: 1em;
+    margin: 2em 1em;
+}
+
+.get-color,
+.modes,
+.submit-btn {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.modes,
+.submit-btn {
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
 }
 
 .get-color {
     border: 0.5px solid #313131;
-    width: 100%;
-    height: 100%;
 }
 
 .modes {
     background: #1F293A;
     border: 1px solid #D1D5DB;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
-    border-radius: 6px;
-    color: white;
     margin: 1em 0;
-    width: 100%;
-    height: 100%;
 }
 
 .submit-btn {
     background: #3D4B60;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
-    border-radius: 4px;
     border: none;
     grid-row: 2 / 3;
     grid-column: 1 / -1;
-    width: 100%;
-    height: 100%;
 }
 
 /* COLORS */
 
-.generated-color {
-    width: 100%;
+.colors-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 12px 12px 12px;
+}
+
+.color-container {
+    height: 550px;
+}
+
+.generated-color,
+.hex-code {
+    cursor: copy;
     padding: 1em 0;
 }
+
+.generated-color {
+    height: 100%;
+}
+
+.hex-code {
+    text-align: center;
+}
+
+/* MEDIA */
+
+@media (min-width: 550px) {
+    body {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    form {
+        display: grid;
+        grid-template-columns: 61px 312px 123px;
+        grid-template-rows: 42px;
+        gap: 1.2em;
+        margin: 2.4em 1.5em;
+    }
+
+    .submit-btn {
+        font-size: 1.2rem;
+        grid-row: auto;
+        grid-column: auto;
+    }
+}
+    
